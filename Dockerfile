@@ -1,4 +1,4 @@
 FROM python
 WORKDIR /app
 copy . .
-CMD ["python","main.py"]
+CMD ["python","merge_sorted_array.py"]
