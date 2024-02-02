@@ -2,20 +2,12 @@ from typing import List
 from math import floor
 
 def removeElement(nums: List[int], val: int) -> int:
-    n=0
-    i=0
-    while i < len(nums)-n:
-        #print(nums)
-        #print(nums[i])
-        if nums[i]==val:
-            #print("wywal")
+    n = 0
+    for i in range(0,len(nums)):
+        if nums[i] != val:
+            nums[n]=nums[i]
             n+=1
-            for j in range(i,len(nums)-1-n):
-                nums[j]=nums[j+1]
-            i-=1
-        i+=1
-    #print(nums)
-    return nums[0:len(nums)-1-n]
+    return nums[0:n]
    
    
 nums = [1,2,3,4,5,6]
