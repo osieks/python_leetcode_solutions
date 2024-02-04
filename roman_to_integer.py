@@ -27,6 +27,29 @@ class Solution:
         #print(wynik)
         return wynik
     
-print(Solution.romanToInt("III"))
-print(Solution.romanToInt("LVIII"))
-print(Solution.romanToInt("MCMXCIV"))
+    MAP_ROMAN = {
+        "I":1,
+        "V":5,
+        "X":10,
+        "L":50,
+        "C":100,
+        "D":500,
+        "M":1000
+    }
+    def roman_to_int_with_map(self,s:str) -> int:
+        wynik = 0
+
+        for x in range(len(s)):
+            if x<(len(s)-1) and self.MAP_ROMAN[s[x]]<self.MAP_ROMAN[s[x+1]]:
+                wynik -= self.MAP_ROMAN[s[x]]
+            else:
+                wynik += self.MAP_ROMAN[s[x]]
+        return wynik
+    
+solution = Solution()
+print(solution.romanToInt("III"))
+print(solution.romanToInt("LVIII"))
+print(solution.romanToInt("MCMXCIV"))
+print(solution.roman_to_int_with_map("III"))
+print(solution.roman_to_int_with_map("LVIII"))
+print(solution.roman_to_int_with_map("MCMXCIV"))
