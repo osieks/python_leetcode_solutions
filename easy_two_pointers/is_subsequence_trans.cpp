@@ -4,6 +4,12 @@
 using namespace std;
 
 class Solution {
+    /*  0ms 7.5mb
+        beats:
+            100% in runtime
+            25.75% in memory
+    */ 
+    
 public:
     bool isSubsequence(string s, string t) {
         if(s.length() == 0)
