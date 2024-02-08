@@ -1,6 +1,19 @@
 {
     "configurations": [
-        
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "hashmaps.ransom_note_in_java.Solution",
+            "projectName": "python_docker_code_8e9d2336"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "hashmaps.Solution",
+            "projectName": "python_docker_code_8e9d2336"
+        },
         {
             "name": "C/C++: g++.exe build and debug active file",
             "type": "cppdbg",
